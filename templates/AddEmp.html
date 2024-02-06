@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee Information</title>
+    <style>
+	body {
+            background-image: url('https://www.vistaura.com/blog/content/images/size/w2000/2023/05/main-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+	h1 {
+            color: #fff;
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+	.container {
+            max-width: 500px;
+            margin: 30px;
+            padding: 20px;
+            background-color: #fffdfdac;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+
+	form {
+            text-align: center;
+        }
+
+	input[type="number"],
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+	input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+	button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+
+	a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>EMPLOYEE DATABASE</h1>
+    <div class="container">
+        <form action="/addemp" autocomplete="on" method="POST" enctype="multipart/form-data">
+            <button type="submit" formaction="/getemp"><strong>GET EMPLOYEE INFORMATION</strong></button>
+            <br><br>
+            Employee ID:<br> <input type="number" name="emp_id" autofocus required><br><br>
+            First Name:<br> <input type="text" name="first_name" required><br><br>
+            Last Name:<br> <input type="text" name="last_name" required><br><br>
+            Primary Skills:<br> <input type="text" name="pri_skill"><br><br>
+            Location:<br> <input type="text" name="location"><br><br>
+            Image: <input type="file" name="emp_image_file"><br><br>
+            <button type="submit">UPDATE DATABASE</button>
+        </form>
+        <a href="/about">About Us</a>
+    </div>
+</body>
+</html>

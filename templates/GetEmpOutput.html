@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2647');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #fff;
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fffdfdac;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>EMPLOYEE INFORMATION</h1>
+    <div class="container">
+        <h2><center>Employee Details</center></h2>
+        {% for data in output %}
+            <p><strong>Employee ID :</strong>{{ data[0] }}</p>
+            <p><strong>First Name :</strong>{{ data[1] }}</p>
+            <p><strong>Last Name :</strong>{{ data[2] }}</p>
+            <p><strong>Primary Skills :</strong>{{ data[3] }}</p>
+            <p><strong>Location :</strong>{{ data[4] }}</p>
+        {% endfor %}
+        <form action="/getemp" autocomplete="on" method="GET">
+            <button type="submit">GO BACK</button>
+        </form>
+    </div>
+</body>
+</html>
