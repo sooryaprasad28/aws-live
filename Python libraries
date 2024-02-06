@@ -1,0 +1,7 @@
+# Libraries Installation Commands     
+sudo yum install git -y   
+sudo dnf install python3-flask   
+sudo pip install PyMysql   
+sudo yum update -y   
+sudo dnf install python3-pip   
+sudo python3 -m pip install boto3
